@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;1000&display=swap');
+
+h3 {
+    color: white;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+}
+
+.container-fluid {
+    background-color: #28282B ;
+    margin: 0;
+    padding-bottom: 50px;
+    color: white;
+}
+
+h3{
+    margin-left: 280px;
+    padding-top: 25px;
+}
+
+.imagen-pokemon {
+    height: 250px;
+    margin-left: 0px; 
+}
+
+.imagen-pokemon1 {
+    height: 250px;
+    margin-left: 245px;
+}
+
+.inline-list {
+    display: inline;
+    margin-left: 5px;
+}
+
+.datos {
+    padding-left: 0;
+}
+
+button {
+    margin-top: 20px;
+    background-color: #ee6b2f;
+    border:none;
+    border-radius: 30%; /* Aplica un radio del 50% para hacerlo redondo */
+}
+
+button:hover{
+    background-color: #c25726;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
