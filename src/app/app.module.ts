@@ -7,6 +7,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { BuscarComponent } from './buscar/buscar.component';
 import { PokemonIndividualComponent } from './pokemon-individual/pokemon-individual.component';
+import { BuscadorComponent } from './buscador/buscador.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,12 +16,14 @@ import { PokemonIndividualComponent } from './pokemon-individual/pokemon-individ
     NavbarComponent,
     InicioComponent,
     BuscarComponent,
-    PokemonIndividualComponent
+    PokemonIndividualComponent,
+    BuscadorComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
