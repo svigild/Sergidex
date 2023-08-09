@@ -6,7 +6,7 @@
     <div class="col-md-4" *ngFor="let pokemon of visiblePokemonList">
       <div class="card mb-3">
         <div class="pokemon-imagen">
-          <img class="card-img-top" [src]="pokemon.sprites.other['official-artwork'].front_default" alt="{{ pokemon.name }}">
+          <img class="card-img-top" [src]="pokemon.sprites?.other['official-artwork']?.front_default" alt="{{ pokemon.name }}">
         </div>
         <div class="card-body text-center">
           <div class="nombre-contenedor">
@@ -20,9 +20,8 @@
           </div>
           <div class="pokemon-stats">
             <p class="stat">{{ pokemon.height }} M</p>
-          <p class="stat">{{ pokemon.weight }} KG</p>
+            <p class="stat">{{ pokemon.weight }} KG</p>
           </div>
-          
         </div>
       </div>
     </div>
