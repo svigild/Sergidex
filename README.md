@@ -2,9 +2,7 @@
 
 ## Versión 0.1 - Creada página de Inicio
 
-![image](https://github.com/svigild/Pokedex/assets/116498192/600b45d7-7b2a-456a-a1a3-6f453afdc2c6)
-![image](https://github.com/svigild/Pokedex/assets/116498192/762d063b-c350-4d06-a0b6-fcee4749d168)
-
+![image](https://github.com/svigild/Pokedex/assets/116498192/1f85cbc7-8b92-4047-8aa3-19da602d8eb0)
 
 
 
@@ -13,9 +11,15 @@ Nada más entrar a la página los usuarios podrán ver los diferentes Pokémon p
 
 Página por defecto:
 
-![image](https://github.com/svigild/Pokedex/assets/116498192/37796fbe-0655-4a65-9d9c-4022ae892888)
+![image](https://github.com/svigild/Pokedex/assets/116498192/e94a86d8-417a-4ee6-82d8-71d547d00f75)
+
 
 Página tras realizar una búsqueda:
 
-![image](https://github.com/svigild/Pokedex/assets/116498192/7706a45a-0481-4292-abca-1caf2145373e)
+![image](https://github.com/svigild/Pokedex/assets/116498192/ec04967a-7096-4e5b-b500-acb32511ad7e)
 
+
+
+## Versión 0.3 - Creada página de Equipo
+El usuario podrá elegir 6 Pokémon para crear su propio equipo. Se muestran todos los Pokémon y el usuario puede buscar por nombre o filtrar por el tipo del Pokémon.
+![image](https://github.com/svigild/Pokedex/assets/116498192/4f8440d5-735b-4d23-9d00-78ab39b4453c)
