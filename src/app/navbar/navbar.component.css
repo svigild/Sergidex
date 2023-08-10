@@ -16,3 +16,8 @@
 .primer-elemento {
     padding-left: 15px;
 }
+
+.navbar-brand img {
+    max-width: 100px; /* Ajusta el valor según el tamaño que desees */
+    height: auto; /* Para mantener la proporción de la imagen */
+  }

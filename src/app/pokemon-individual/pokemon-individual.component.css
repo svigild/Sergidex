@@ -6,12 +6,6 @@ h3 {
     font-weight: 600;
 }
 
-.container {
-    background-color: #28282B ;
-    padding-bottom: 50px;
-    color: white;
-}
-
 .imagen-pokemon {
     height: 250px;
     margin-left: 0px; 
@@ -134,4 +128,16 @@ a {
 
   .titulo-secundario {
     margin-top: 20px;
+  }
+
+  .custom-container {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .custom-pokemon-individual {
+    background-color: #28282B; /* Fondo negro */
+    margin: 0; /* Anula los márgenes */
+    padding: 0; /* Anula los rellenos */
+    color: white; /* Color del texto */
   }

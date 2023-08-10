@@ -50,4 +50,21 @@ export class ServicioService {
       })
     );
   } 
+
+  obtenerPokemonsDestacados(): Observable<any> {
+    const pokemonNames = ['mewtwo', 'rayquaza', 'groudon', 'arceus'];
+    const requests: Observable<any>[] = [];
+  
+    for (const name of pokemonNames) {
+      const url = `${this.apiUrl}/pokemon/${name}`;
+      requests.push(this.http.get(url));
+    }
+  
+    return forkJoin(requests);
+  }
+
+  obtenerDetallesPokemon(pokemonId: number) {
+    const url = `${this.apiUrl}/pokemon-species/${pokemonId}/`;
+    return this.http.get(url);
+  }
 }
