@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="row botones">
+    <div class="col-md-2 col-sm-3 col-xs-4 mb-2 boton-ver-todos">
+      <button class="btn btn-block border-dark rounded-pill btn-dark" (click)="seeAllPokemon()"><strong>VER TODOS</strong></button>
+    </div>
+    <div class="col-md-2 col-sm-3 col-xs-4 mb-2" *ngFor="let type of allTypes" (click)="filterByType(type)">
+      <button class="btn btn-block border-0 rounded-pill" [ngClass]="getColorClassForType(type)" >{{ type | uppercase }}</button>
+    </div>
+    <div class="search-container">
+      <input type="search" [(ngModel)]="searchTerm" placeholder="Buscar Pokémon" (input)="searchPokemon(selectedType)">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-2 col-sm-4 col-xs-6" *ngFor="let pokemon of filteredPokemonList" (click)="selectPokemon(pokemon)">
+      <div class="card mb-3">
+        <div class="pokemon-imagen">
+          <img class="card-img-top" [src]="pokemon.sprites?.front_default" alt="{{ pokemon.name }}">
+        </div>
+        <div class="card-body text-center">
+          <div class="nombre-contenedor">
+            <p class="pokemon-id">#{{ pokemon.id }}</p>
+            <h2 class="pokemon-nombre">{{ pokemon.name | titlecase }}</h2>
+          </div>
+          <div class="types">
+            <p *ngFor="let type of pokemon.types" [ngClass]="getCssClassForType(type.type.name)" class="tipo">
+              {{ type.type.name | uppercase }}
+            </p>
+          </div>
+          <div class="pokemon-stats">
+            <p class="stat">{{ pokemon.height }} M</p>
+            <p class="stat">{{ pokemon.weight }} KG</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

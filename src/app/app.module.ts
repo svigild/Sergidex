@@ -9,6 +9,8 @@ import { BuscarComponent } from './buscar/buscar.component';
 import { PokemonIndividualComponent } from './pokemon-individual/pokemon-individual.component';
 import { BuscadorComponent } from './buscador/buscador.component';
 import { FormsModule } from '@angular/forms';
+import { EquipoComponent } from './equipo/equipo.component';
+import { ListaPokemonEquipoComponent } from './lista-pokemon-equipo/lista-pokemon-equipo.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { FormsModule } from '@angular/forms';
     InicioComponent,
     BuscarComponent,
     PokemonIndividualComponent,
-    BuscadorComponent
+    BuscadorComponent,
+    EquipoComponent,
+    ListaPokemonEquipoComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,185 @@
+.pokeball img {
+  max-width: 100%; 
+  opacity: 1; 
+}
+
+@media (max-width: 767px) { 
+  .col-xs-6 {
+    flex-basis: 50%;
+  }
+}
+
+.pokeball {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10vw; /* Utiliza unidades de viewport width (vw) */
+  height: 10vw; /* Utiliza unidades de viewport width (vw) */
+  margin: 1vw; /* Utiliza unidades de viewport width (vw) */
+  overflow: hidden; /* Para asegurar que la imagen no salga de la pokeball */
+}
+
+.pokemon-name {
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.selected {
+  background-color: transparent;
+}
+
+.type-normal {
+  background-color: rgba(168, 168, 120, 0.7);
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+
+.type-fire {
+  background-color: rgba(240, 128, 48, 0.7);
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+
+.type-water {
+  background-color: rgba(104, 144, 240, 0.7);
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+
+.type-electric {
+  background-color: rgba(248, 208, 48, 0.7);
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+
+.type-grass {
+  background-color: rgba(120, 200, 80, 0.7);
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+
+.type-ice {
+  background-color: rgba(152, 216, 216, 0.7);
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+
+.type-fighting {
+  background-color: rgba(192, 48, 40, 0.7);
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+
+.type-poison {
+  background-color: rgba(160, 64, 160, 0.7);
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+
+.type-ground {
+  background-color: rgba(224, 192, 104, 0.7);
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+
+.type-flying {
+  background-color: rgba(168, 144, 240, 0.7);
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+
+.type-psychic {
+  background-color: rgba(248, 88, 136, 0.7);
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+
+.type-bug {
+  background-color: rgba(168, 184, 32, 0.7);
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+
+.type-rock {
+  background-color: rgba(184, 160, 56, 0.7);
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+
+.type-ghost {
+  background-color: rgba(112, 88, 152, 0.7);
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+
+.type-dragon {
+  background-color: rgba(112, 56, 248, 0.7);
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+
+.type-dark {
+  background-color: rgba(112, 88, 72, 0.7);
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+
+.type-steel {
+  background-color: rgba(184, 184, 208, 0.7);
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+
+.type-fairy {
+  background-color: rgba(238, 153, 172, 0.7);
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+
+.pokemon-image {
+  width: 100%;
+  height: auto;
+  max-height: 300px; 
+}
+
+.pokemon-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor:not-allowed;
+}
+
+.pokemon-details {
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  margin-top: 10px; /* Espacio entre la imagen y los detalles */
+  text-align: center;
+  margin-bottom: 20px;
+}

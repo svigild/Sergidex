@@ -1,0 +1,31 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <div class="row">
+    <div class="col-md-2 col-sm-4 col-xs-6" *ngFor="let pokemon of selectedPokemonList; let i = index">
+      <div class="pokeball" [ngClass]="{'selected': pokemon}" (click)="removePokemonFromTeam(i)">
+        <img src="https://cdn.icon-icons.com/icons2/2603/PNG/512/poke_ball_icon_155925.png" alt="Pokeball">
+        <div class="pokemon-overlay">
+          <img [src]="pokemon.sprites?.other['official-artwork'].front_default" alt="{{ pokemon.name }}" class="pokemon-image">
+          
+        </div>
+      </div>
+      <div class="pokemon-details" [ngClass]="getColorForType(pokemon.types[0].type.name)">
+        <p class="pokemon-name">{{ pokemon.name | titlecase }}</p>
+        <div class="pokemon-types">
+          <p *ngFor="let type of pokemon.types" [ngClass]="getCssClassForType(type.type.name)" class="pokemon-type">
+            {{ type.type.name | uppercase }}
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Agrega pokeballs vacías para los espacios sin pokemon seleccionado -->
+    <div class="col-md-2 col-sm-4 col-xs-6" *ngFor="let empty of emptyPokemonSlots(selectedPokemonList.length); let i = index">
+      <div class="pokeball">
+        <img src="https://cdn.icon-icons.com/icons2/2603/PNG/512/poke_ball_icon_155925.png" alt="Pokeball">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <app-lista-pokemon-equipo (pokemonSelected)="addPokemonToTeam($event)"></app-lista-pokemon-equipo>
+  </div>
+</div>

@@ -20,7 +20,7 @@ export class ServicioService {
   }
 
   getAllPokemon(): Observable<any[]> {
-    return this.http.get<any>(`${this.apiUrl}/pokemon?limit=1000`).pipe(
+    return this.http.get<any>(`${this.apiUrl}/pokemon?limit=1010`).pipe(
       tap((data: any) => console.log('API Response:', data)),
       map((data: any) => data.results), // Aquí estás extrayendo la lista de resultados
       switchMap((results: any[]) => {
