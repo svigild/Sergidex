@@ -22,4 +22,24 @@ Página tras realizar una búsqueda:
 
 ## Versión 0.3 - Creada página de Equipo
 El usuario podrá elegir 6 Pokémon para crear su propio equipo. Se muestran todos los Pokémon y el usuario puede buscar por nombre o filtrar por el tipo del Pokémon.
+
 ![image](https://github.com/svigild/Pokedex/assets/116498192/4f8440d5-735b-4d23-9d00-78ab39b4453c)
+
+
+## Versión 0.4 - Página de inicio mejorada
+
+Se ha añadido la sección de "Pokémon Destacados" donde se podrán ver mis 4 Pokémon favoritos.
+
+![image](https://github.com/svigild/Pokedex/assets/116498192/14bf625d-22bd-4c91-bf9a-1129deec6ac1)
+
+Se ha mejorado el diseño del Pokémon aleatorio y se ha añadido la posibilidad de ver al Pokémon en su forma shiny apretando el botón de la estrella ✨
+
+![image](https://github.com/svigild/Pokedex/assets/116498192/5756f9ab-9eaa-4a66-90bb-d6b103c4d9dc)
+![image](https://github.com/svigild/Pokedex/assets/116498192/b63e11eb-2595-4356-8b59-daebd8cbdc1a)
+
+
+
+
+
+
+
