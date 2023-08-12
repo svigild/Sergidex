@@ -11,6 +11,8 @@ import { BuscadorComponent } from './buscador/buscador.component';
 import { FormsModule } from '@angular/forms';
 import { EquipoComponent } from './equipo/equipo.component';
 import { ListaPokemonEquipoComponent } from './lista-pokemon-equipo/lista-pokemon-equipo.component';
+import { PokemonDetailComponent } from './pokemon-detail/pokemon-detail.component';
+import { SobreMiComponent } from './sobre-mi/sobre-mi.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { ListaPokemonEquipoComponent } from './lista-pokemon-equipo/lista-pokemo
     PokemonIndividualComponent,
     BuscadorComponent,
     EquipoComponent,
-    ListaPokemonEquipoComponent
+    ListaPokemonEquipoComponent,
+    PokemonDetailComponent,
+    SobreMiComponent
   ],
   imports: [
     BrowserModule,

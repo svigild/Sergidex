@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row botones">
     <div class="col-md-2 col-sm-3 col-xs-4 mb-2 boton-ver-todos">
-      <button class="btn btn-block border-dark rounded-pill btn-dark" (click)="seeAllPokemon()"><strong>VER TODOS</strong></button>
+      <button class="btn btn-block border-dark rounded-pill btn-dark todos-boton" (click)="seeAllPokemon()"><strong>VER TODOS</strong></button>
     </div>
     <div class="col-md-2 col-sm-3 col-xs-4 mb-2" *ngFor="let type of allTypes" (click)="filterByType(type)">
       <button class="btn btn-block border-0 rounded-pill" [ngClass]="getColorClassForType(type)" >{{ type | uppercase }}</button>

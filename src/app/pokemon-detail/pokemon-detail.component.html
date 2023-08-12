@@ -1,0 +1,47 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <!-- Imagen del Pokémon -->
+        <div class="pokemon-imagen">
+          <img class="card-img-top" [src]="pokemonDetails.sprites?.other['official-artwork']?.front_default" alt="{{ pokemonDetails.name }}">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <!-- Datos del Pokémon -->
+        <div class="card-body text-center">
+          <div class="nombre-contenedor">
+            <h2 class="pokemon-nombre">{{ pokemonDetails.name | titlecase }} #{{ pokemonId }}</h2>
+          </div>
+          <div class="types">
+            <!-- Tipos -->
+            <p *ngFor="let type of pokemonDetails.types" [ngClass]="getCssClassForType(type.type.name)" class="tipo">
+              {{ type.type.name | uppercase }}
+            </p>
+          </div>
+          <div class="pokemon-details">
+            <!-- Altura y Peso -->
+            <p class="detail-value">{{ pokemonDetails.height / 10 }} M</p>
+            <p class="detail-value">{{ pokemonDetails.weight / 10}} KG</p>
+          </div>
+          <div class="description">
+            <!-- Descripción -->
+            <h3 id="descripcion-titulo">Descripción</h3>
+            <p id="descripcion">{{ spanishDescription }}</p>
+          </div>
+          <div class="evolution-chain" *ngIf="pokemonEvolutionChain && pokemonEvolutionChain.chain.evolves_to.length > 0">
+            <h3 id="evoluciones-titulo">Evoluciones</h3>
+            <div class="evolution-stages-horizontal">
+              <ng-container *ngFor="let stage of getEvolutionStages(pokemonEvolutionChain.chain); let last = last">
+                <div class="evolution-stage">
+                  <img class="evolution-image" [src]="getSpriteUrl(stage.url)" alt="{{ stage.name }}">
+                  <p class="pokemon-name">{{ stage.name }}</p>
+                </div>
+                <div *ngIf="!last" class="evolution-arrow">></div>
+              </ng-container>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

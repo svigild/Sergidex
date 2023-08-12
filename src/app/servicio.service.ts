@@ -63,4 +63,38 @@ export class ServicioService {
     return forkJoin(requests);
   }
 
+  getDescripcionPokemonPorEspecie(especieUrl: string): Observable<any> {
+    console.log("getDescripcionPokemonPorEspecie called"); // Agrega este console.log
+    return this.http.get(especieUrl);
+  }
+
+  getPokemonSpecies(url: string): Observable<any> {
+    return this.http.get(url);
+  }
+  
+  getPokemonEvolutionChain(url: string): Observable<any> {
+    return this.http.get(url);
+  }
+
+  getSpriteUrl(url: string): string {
+    // Si la URL contiene "/other/official-artwork/", ya es una URL completa
+    if (url.includes('/other/official-artwork/')) {
+      return url;
+    }
+  
+    // Si la URL no contiene "/other/official-artwork/", construimos la URL completa
+    const pokemonId = this.extractPokemonNumberFromUrl(url);
+    return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemonId}.png`;
+  }
+
+
+  getSpanishDescription(speciesUrl: string): Observable<string> {
+    return this.http.get(speciesUrl).pipe(
+      map((speciesDetails: any) => {
+        const flavorTextEntries = speciesDetails.flavor_text_entries;
+        const spanishFlavorTextEntry = flavorTextEntries.find((entry: any) => entry.language.name === 'es');
+        return spanishFlavorTextEntry.flavor_text;
+      })
+    );
+  }
 }

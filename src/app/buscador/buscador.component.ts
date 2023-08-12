@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { debounceTime } from 'rxjs/operators';
 
 @Component({
   selector: 'app-buscador',
@@ -13,6 +14,8 @@ export class BuscadorComponent {
   searchTerm: string = '';
 
   onSearch() {
-    this.search.emit(this.searchTerm);
+    if (this.searchTerm.trim() !== '') {
+      this.search.emit(this.searchTerm);
+    }
   }
 }

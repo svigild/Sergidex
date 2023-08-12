@@ -1,28 +1,29 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      <a class="navbar-brand mx-auto" href="#">
-        <img src="./assets/SergiDex.png">
-      </a>
-      <button (click)="toggleCollapse()" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" [class.show]="show" id="navbarNav">
-        <ul class="navbar-nav">
-          <div class="primer-elemento">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="/inicio" >Inicio</a>
-            </li>
-          </div>
+  <div class="container-fluid">
+    <a class="navbar-brand mx-auto" href="#">
+      <img src="./assets/SergiDex.png">
+    </a>
+    <button (click)="toggleCollapse()" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" [class.show]="show" id="navbarNav">
+      <ul class="navbar-nav">
+        <div class="primer-elemento">
           <li class="nav-item">
-            <a class="nav-link" href="/buscar">Buscar</a>
+            <a class="nav-link" aria-current="page" routerLink="/inicio" >Inicio</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link"  href="/equipo">Equipo</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link"  href="/sobrenosotros">Sobre nosotros</a>
-          </li>
-        </ul>
-      </div>
+        </div>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/buscar">Buscar</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  routerLink="/equipo">Equipo</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  routerLink="/sobre-mi">Sobre mí</a>
+        </li>
+        <!---->
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>

@@ -11,7 +11,7 @@
           <img src="https://images.wikidexcdn.net/mwuploads/wikidex/thumb/6/66/latest/20150729161538/Rayquaza.png/800px-Rayquaza.png" alt="Rayquaza">
       </div>
     </div>
-    
+    <hr class="hr-separator">
     <div class="row">
         <div class="destacados-container">
             <h3 class="section-title titulo">Pokémon Destacados</h3>
@@ -19,18 +19,19 @@
               <div *ngFor="let pokemon of destacados" class="pokemon-card">
                 <img [src]="pokemon.sprites?.other['official-artwork'].front_default" alt="{{ pokemon.nombre }}" class="pokemon-image">
                 <h3 class="pokemon-name">{{ pokemon.name | uppercase }}</h3>
-                <div class="types">
-                  <p *ngFor="let type of pokemon.types" [ngClass]="getCssClassForType(type.type.name)" class="tipo">
+                <div class="types-container">
+                  <div *ngFor="let type of pokemon.types" [ngClass]="getCssClassForType(type.type.name)" class="tipo">
                     {{ type.type.name | uppercase }}
-                  </p>
+                  </div>
                 </div>
                 <div class="pokemon-details">
-                  <span class="detail-value">{{ pokemon.height / 10 }}M</span>
-                  <span class="detail-value"> {{ pokemon.weight / 10 }}KG</span>
+                  <span class="detail-value">{{ pokemon.height / 10 }} M</span>
+                  <span class="detail-value"> {{ pokemon.weight / 10 }} KG</span>
                 </div>
               </div>
             </div>
           </div>
     </div>
+    <hr class="hr-separator">
     <app-pokemon-individual></app-pokemon-individual>
 </div>

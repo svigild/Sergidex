@@ -1,0 +1,38 @@
+.botones-enlaces {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.boton-enlace {
+    display: inline-block;
+    background-color: #ee6b2f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.boton-enlace i {
+    margin-right: 10px;
+}
+
+.boton-enlace:hover {
+    background-color: #c25726;
+}
+
+h3 {
+    color: #ee6b2f;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+    text-align: left;
+}
+
+.container {
+    margin-top: 20px;
+}

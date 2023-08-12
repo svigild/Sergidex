@@ -38,7 +38,6 @@ img {
   font-size: 15px;
   font-family: 'Trebuchet MS';
   font-weight: bold;
-  width: 6em;
   text-align: center;
   display: inline-block;
   border: .1em solid transparent;
@@ -55,6 +54,9 @@ img {
 
 .type-normal {
   background-color: #A8A878;
+  color: white;
+    text-align: center;
+    font-weight: bold;
 }
   
   .type-fire {
@@ -209,10 +211,10 @@ img {
   }
   
   .pokemon-name {
-    font-size: 20px;
-    font-weight: bold;
     margin-bottom: 5px;
     text-align: center;
+    font-size: 1.7rem;
+    font-weight: 800;
   }
   
   .pokemon-details {
@@ -229,18 +231,38 @@ img {
   }
 
 
-.pokemon-details {
-  display: flex;
-  gap: 0.5rem;
-  font-size: 0.75rem;
-}
-
+  .pokemon-details {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center; 
+    font-size: 0.75rem;
+    margin-top: 10px;
+  }
+  
 .detail-value{
   background-color: #ececec;
-    padding: 0.15rem 0.4rem; /* Reducir el padding vertical y horizontal */
-    border-radius: 0.5rem;
+  padding: 0.15rem 0.4rem; 
+  border-radius: 0.5rem;
+  font-weight: 700;
+  box-shadow: 0 0 1rem rgba(0,0,0,0.25);
 }
 
 .tipo {
-  margin: 0 5px; /* Agrega espacio entre los tipos */
+  padding: 0.1em 0.5em; /* Ajustado el padding */
+  margin: 5px;
+  box-shadow: 0 0 1rem rgba(0,0,0,0.25);
+}
+
+.types-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.hr-separator {
+  border: none;
+  height: 1px;
+  background-color: #ccc;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1); /* Sombra */
+  margin: 20px 0; /* Espaciado superior e inferior */
 }

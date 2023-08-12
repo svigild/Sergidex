@@ -34,6 +34,7 @@
   color: white;
   text-align: center;
   font-weight: bold;
+  box-shadow: 0 0 1rem rgba(0,0,0,0.2);
 }
 
 .type-fire {
@@ -41,6 +42,7 @@
   color: white;
   text-align: center;
   font-weight: bold;
+  box-shadow: 0 0 1rem rgba(0,0,0,0.2);
 }
 
 .type-water {
@@ -48,6 +50,7 @@
   color: white;
   text-align: center;
   font-weight: bold;
+  box-shadow: 0 0 1rem rgba(0,0,0,0.2);
 }
 
 .type-electric {
@@ -55,6 +58,7 @@
   color: white;
   text-align: center;
   font-weight: bold;
+  box-shadow: 0 0 1rem rgba(0,0,0,0.2);
 }
 
 .type-grass {
@@ -62,6 +66,7 @@
   color: white;
   text-align: center;
   font-weight: bold;
+  box-shadow: 0 0 1rem rgba(0,0,0,0.2);
 }
 
 .type-ice {
@@ -69,6 +74,7 @@
   color: white;
   text-align: center;
   font-weight: bold;
+  box-shadow: 0 0 1rem rgba(0,0,0,0.2);
 }
 
 .type-fighting {
@@ -76,6 +82,7 @@
   color: white;
   text-align: center;
   font-weight: bold;
+  box-shadow: 0 0 1rem rgba(0,0,0,0.2);
 }
 
 .type-poison {
@@ -83,6 +90,7 @@
   color: white;
   text-align: center;
   font-weight: bold;
+  box-shadow: 0 0 1rem rgba(0,0,0,0.2);
 }
 
 .type-ground {
@@ -90,6 +98,7 @@
   color: white;
   text-align: center;
   font-weight: bold;
+  box-shadow: 0 0 1rem rgba(0,0,0,0.2);
 }
 
 .type-flying {
@@ -97,6 +106,7 @@
   color: white;
   text-align: center;
   font-weight: bold;
+  box-shadow: 0 0 1rem rgba(0,0,0,0.2);
 }
 
 .type-psychic {
@@ -104,6 +114,7 @@
   color: white;
   text-align: center;
   font-weight: bold;
+  box-shadow: 0 0 1rem rgba(0,0,0,0.2);
 }
 
 .type-bug {
@@ -111,6 +122,7 @@
   color: white;
   text-align: center;
   font-weight: bold;
+  box-shadow: 0 0 1rem rgba(0,0,0,0.2);
 }
 
 .type-rock {
@@ -118,6 +130,7 @@
   color: white;
   text-align: center;
   font-weight: bold;
+  box-shadow: 0 0 1rem rgba(0,0,0,0.2);
 }
 
 .type-ghost {
@@ -125,6 +138,7 @@
   color: white;
   text-align: center;
   font-weight: bold;
+  box-shadow: 0 0 1rem rgba(0,0,0,0.2);
 }
 
 .type-dragon {
@@ -132,6 +146,7 @@
   color: white;
   text-align: center;
   font-weight: bold;
+  box-shadow: 0 0 1rem rgba(0,0,0,0.2);
 }
 
 .type-dark {
@@ -139,6 +154,7 @@
   color: white;
   text-align: center;
   font-weight: bold;
+  box-shadow: 0 0 1rem rgba(0,0,0,0.2);
 }
 
 .type-steel {
@@ -146,6 +162,7 @@
   color: white;
   text-align: center;
   font-weight: bold;
+  box-shadow: 0 0 1rem rgba(0,0,0,0.2);
 }
 
 .type-fairy {
@@ -153,6 +170,7 @@
   color: white;
   text-align: center;
   font-weight: bold;
+  box-shadow: 0 0 1rem rgba(0,0,0,0.25);
 }
 
 .pokemon-image {

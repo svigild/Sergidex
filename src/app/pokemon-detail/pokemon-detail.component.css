@@ -1,0 +1,301 @@
+.container {
+  padding: 20px;
+}
+
+.card {
+  border: none; /* Eliminar el borde de la tarjeta */
+  box-shadow: none; /* Eliminar la sombra */
+}
+
+.pokemon-imagen {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.pokemon-nombre {
+  margin-bottom: 5px;
+  font-size: 2.7rem;
+  
+  text-transform: uppercase;
+}
+
+.pokemon-id {
+  font-size: 16px;
+  margin: 10px 0;
+  background-color: #ececec;
+  padding: 0.15rem 0.4rem; /* Reducir el padding vertical y horizontal */
+  border-radius: 0.5rem;
+}
+
+.types {
+  margin-top: 10px;
+}
+
+.tipo {
+  font-size: 1.0em;
+  color: white;
+  text-shadow: 0em 0em 0.2em black;
+  box-shadow: 0 0 1rem rgba(0,0,0,0.25);
+  text-align: center;
+  font-weight: bold;
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 2px;
+  border-radius: 4px;
+}
+
+.pokemon-details {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+}
+
+.pokemon-id{
+  font-size: 1.0em;
+  color: white;
+
+  text-align: center;
+  font-weight: bold;
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 2px;
+  border-radius: 4px;
+}
+
+.detail-value {
+  font-size: 16px;
+  margin: 10px 0;
+  background-color: #ececec;
+  padding: 0.15rem 0.4rem; /* Reducir el padding vertical y horizontal */
+  border-radius: 0.5rem;
+}
+
+.description {
+  margin-top: 20px;
+  font-size: 16px;
+}
+.type-normal {
+  background-color: #A8A878;
+  text-align: center;
+  font-weight: bold;
+  
+}
+
+.type-fire {
+  background-color: #F08030;
+  text-align: center;
+  font-weight: bold;
+  
+}
+
+.type-water {
+  background-color: #6890F0;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  
+}
+
+.type-electric {
+  background-color: #F8D030;
+  text-align: center;
+  font-weight: bold;
+  
+}
+
+.type-grass {
+  background-color: #78C850;
+  text-align: center;
+  font-weight: bold;
+  
+}
+
+.type-ice {
+  background-color: #98D8D8;
+  text-align: center;
+  font-weight: bold;
+}
+
+.type-fighting {
+  background-color: #C03028;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+
+.type-poison {
+  background-color: #A040A0;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+
+.type-ground {
+  background-color: #E0C068;
+  text-align: center;
+  font-weight: bold;
+}
+
+.type-flying {
+  background-color: #A890F0;
+  text-align: center;
+  font-weight: bold;
+}
+
+.type-psychic {
+  background-color: #F85888;
+  text-align: center;
+  font-weight: bold;
+}
+
+.type-bug {
+  background-color: #A8B820;
+  text-align: center;
+  font-weight: bold;
+}
+
+.type-rock {
+  background-color: #B8A038;
+  text-align: center;
+  font-weight: bold;
+}
+
+.type-ghost {
+  background-color: #705898;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+
+.type-dragon {
+  background-color: #7038F8;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+
+.type-dark {
+  background-color: #705848;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+
+.type-steel {
+  background-color: #B8B8D0;
+  text-align: center;
+  font-weight: bold;
+}
+
+.type-fairy {
+  background-color: #EE99AC;
+  text-align: center;
+  font-weight: bold;
+}
+
+.container {
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+}
+
+.evolution-chain {
+  margin-top: 20px;
+}
+
+.evolution-chain h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.evolution-chain ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.evolution-chain li {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.evolution-arrow {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 24px;
+  line-height: 1;
+  color: #999;
+}
+
+.evolution-stages-horizontal {
+  display: flex;
+  align-items: center;
+}
+
+.evolution-stage {
+  display: flex;
+  align-items: center;
+}
+
+
+.evolution-stages-horizontal {
+  display: flex;
+  align-items: center;
+}
+
+.evolution-stage {
+  display: flex;
+  align-items: center;
+  flex-direction: column; /* Cambia la dirección a columna */
+  text-align: center;
+  margin-right: 20px; /* Agrega margen entre las etapas */
+}
+
+.evolution-image {
+  width: 150px; /* Ajusta el tamaño de las imágenes según tu preferencia */
+  height: 150px;
+  margin-bottom: 10px; /* Agrega margen inferior */
+}
+
+.pokemon-name {
+  font-size: 1.1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+
+.pokemon-details {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center; 
+  font-size: 0.75rem;
+  margin-top: 10px;
+}
+
+.detail-value{
+  background-color: #ececec;
+  padding: 0.15rem 0.4rem; 
+  border-radius: 0.5rem;
+  font-weight: 700;
+  box-shadow: 0 0 1rem rgba(0,0,0,0.25);
+}
+
+#descripcion {
+  font-size: 1rem;
+}
+
+#descripcion-titulo {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+#evoluciones-titulo {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.pokemon-nombre {
+  font-size: 3.0rem;
+  font-weight: 800;
+}

@@ -21,3 +21,7 @@
     max-width: 100px; /* Ajusta el valor según el tamaño que desees */
     height: auto; /* Para mantener la proporción de la imagen */
   }
+
+nav {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
