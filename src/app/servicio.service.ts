@@ -63,8 +63,4 @@ export class ServicioService {
     return forkJoin(requests);
   }
 
-  obtenerDetallesPokemon(pokemonId: number) {
-    const url = `${this.apiUrl}/pokemon-species/${pokemonId}/`;
-    return this.http.get(url);
-  }
 }

@@ -34,12 +34,28 @@ img {
     height: auto; /* Para mantener la proporción de la imagen */
 }
 
-.type-normal {
-    background-color: #A8A878;
+.types { 
+  font-size: 15px;
+  font-family: 'Trebuchet MS';
+  font-weight: bold;
+  width: 6em;
+  text-align: center;
+  display: inline-block;
+  border: .1em solid transparent;
+  padding: .1em .2em .2em;
+  margin: .1em .015em;
+  border-radius: .4em;
+}
+
+.tipo {
+    font-size:1.0em; 
     color: white;
-    text-align: center;
-    font-weight: bold;
-  }
+    text-shadow: 0em 0em .2em black;
+}
+
+.type-normal {
+  background-color: #A8A878;
+}
   
   .type-fire {
     background-color: #F08030;
@@ -182,6 +198,7 @@ img {
     width: 280px;
     background-color: #f7f7f7;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
   }
   
   .pokemon-image {
@@ -211,6 +228,19 @@ img {
     color: #555;
   }
 
-  .pokemon-card:hover {
-    transform: scale(1.05);
+
+.pokemon-details {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+}
+
+.detail-value{
+  background-color: #ececec;
+    padding: 0.15rem 0.4rem; /* Reducir el padding vertical y horizontal */
+    border-radius: 0.5rem;
+}
+
+.tipo {
+  margin: 0 5px; /* Agrega espacio entre los tipos */
 }

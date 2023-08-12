@@ -9,6 +9,7 @@ import { ServicioService } from '../servicio.service';
 export class PokemonIndividualComponent implements OnInit {
   pokemonAleatorio: any;
   pokemonActual: any;
+  showingShiny: boolean = false;
 
   constructor(private pokemonService: ServicioService) { }
 
@@ -45,17 +46,18 @@ export class PokemonIndividualComponent implements OnInit {
 
   obtenerPokemonAleatorio(numero: number): void {
     this.pokemonService.getPokemonPorNumero(numero).subscribe(data => {
-
+  
       //Primera letra del nombre a mayúscula
       data.name = data.name.charAt(0).toUpperCase() + data.name.slice(1);
-
+  
       //Altura de decimetros a metros
       data.height = data.height / 10;
-
+  
       //Peso a kilogramos
       data.weight = data.weight / 10;
-
+  
       this.pokemonAleatorio = data;
+      this.showingShiny = false; // Reiniciar el estado de "shiny"
     });
   }
 
@@ -63,5 +65,16 @@ export class PokemonIndividualComponent implements OnInit {
     const nuevoNumeroAleatorio = Math.floor(Math.random() * 1010) + 1;
     this.obtenerPokemonAleatorio(nuevoNumeroAleatorio);
   }
+  
+  cambiarImagenShiny(): void {
+    this.showingShiny = !this.showingShiny;
+  }
 
+  getNormalImageUrl(pokemonId: number): string {
+    return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemonId}.png`;
+  }
+  
+  getShinyImageUrl(pokemonId: number): string {
+    return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/${pokemonId}.png`;
+  }
 }

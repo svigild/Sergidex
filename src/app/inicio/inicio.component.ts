@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ServicioService } from '../servicio.service';
+import { forkJoin, map, tap } from 'rxjs';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-inicio',
@@ -15,24 +17,30 @@ export class InicioComponent implements OnInit {
 
   ngOnInit(): void {
     this.obtenerPokemonsDestacados(); // Llamo al método para obtener los Pokémon destacados
-    this.obtenerDescripciones(this.destacados); // Agregar esta línea
   }
 
   obtenerPokemonsDestacados() {
-    for (const pokemon of this.destacados) {
-      this.apiService.obtenerDetallesPokemon(pokemon.id).subscribe(
-        (detalles: any) => {
-          // Obtener la descripción en el idioma deseado, por ejemplo, en inglés (en)
-          const description = detalles.flavor_text_entries.find((entry: any) => entry.language.name === 'en');
-          if (description) {
-            pokemon.description = description.flavor_text;
-          }
-        },
-        (error: any) => {
-          console.error('Error al obtener detalles del Pokémon:', error);
-        }
-      );
-    }
+    this.apiService.obtenerPokemonsDestacados().subscribe(
+      (pokemons: any[]) => {
+        this.destacados = pokemons.map(details => {
+          const nameLowerCase = details.name.toLowerCase(); // Convierte el nombre a minúsculas
+          return {
+            id: details.id,
+            name: nameLowerCase,
+            height: details.height / 10, // Dividir entre 10 para obtener altura en decímetros
+            weight: details.weight / 10, // Dividir entre 10 para obtener peso en hectogramos
+            sprites: details.sprites,
+            types: details.types,
+            description: '' // Asigna la descripción aquí
+          };
+        });
+      },
+      (error: any) => {
+        console.error('Error al obtener Pokémon destacados:', error);
+      }
+    );
+  }
+  
 
   typeColorMappings: { [key: string]: string } = {
     normal: 'type-normal',
@@ -61,23 +69,6 @@ export class InicioComponent implements OnInit {
     return `rounded ${typeClass}`;
   }
 
-  obtenerDescripciones(pokemons: any[]) {
-    for (const pokemon of pokemons) {
-      this.apiService.obtenerDescripcionPokemon(pokemon.id).subscribe(
-        (data) => {
-          const description = data.flavor_text_entries.find(
-            (entry: any) => entry.language.name === 'en' && entry.version.name === 'sword'
-          );
-          if (description) {
-            pokemon.descripcion = description.flavor_text.replace(/\n/g, ' '); // Remover saltos de línea
-            console.log('Descripción:', pokemon.descripcion); // Agregar este log
-          }
-        },
-        (error) => {
-          console.error('Error al obtener la descripción:', error);
-        }
-      );
-    }
-  }
+
 
 }

@@ -1,41 +1,48 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-<div class="custom-pokemon-individual">
 
 
-<div class="container custom-container">
-    <div *ngIf="pokemonAleatorio">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h3 class="titulo-secundario">
-                    Descubre a ¡ <span style="color: #ee6b2f">{{ pokemonAleatorio.name }}</span> !
-                </h3>
+    <div class="container">
+        <div *ngIf="pokemonAleatorio">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h3 class="titulo-secundario">
+                        Descubre a ¡ <span style="color: #ee6b2f">{{ pokemonAleatorio.name }}</span> !
+                    </h3>
+                </div>
+            </div>
+            <div class="pokemon-card">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 text-center">
+                    <img class="imagen-pokemon" [src]="showingShiny ? getShinyImageUrl(pokemonAleatorio.id) : getNormalImageUrl(pokemonAleatorio.id)" alt="{{ pokemonAleatorio.name }}">
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 datos">
+                    <div class="row text-left">
+                        <div class="col-lg-12">
+                            <h5><span style="color: #ee6b2f"> Número en la Pokédex: </span> {{ pokemonAleatorio.id }} </h5>
+                            <h5><span style="color: #ee6b2f"> Altura: </span> {{ pokemonAleatorio.height }} m</h5>
+                            <h5><span style="color: #ee6b2f"> Peso: </span> {{ pokemonAleatorio.weight }} kg</h5>
+                                <div class="type-container d-flex justify-content-between">
+                                    <span *ngFor="let type of pokemonAleatorio.types" [ngClass]="getCssClassForType(type.type.name)">
+                                    {{ type.type.name | uppercase }}
+                                    </span>
+                                </div>
+                        </div>
+                        <div class="col-lg-12 mt-3 d-flex justify-content-between">
+                            <button type="button"
+                                    class="btn btn-primary rounded-circle btn-circle d-flex align-items-center justify-content-center shiny"
+                                    [ngClass]="{ 'shiny-button-active': showingShiny }"
+                                    (click)="cambiarImagenShiny()">
+                                <span class="material-symbols-outlined">{{ showingShiny ? 'star' : 'star' }}</span>
+                            </button>
+                            <button type="button"
+                                    class="btn btn-primary rounded-circle btn-circle d-flex align-items-center justify-content-center boton-actualizar mr-2"
+                                    (click)="cambiarPokemon()">
+                                <span class="material-symbols-outlined">refresh</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-12 text-center">
-                <img class="imagen-pokemon" [src]="pokemonAleatorio.sprites.other['official-artwork'].front_default" alt="{{ pokemonAleatorio.name }}">
-                
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-12 datos">
-                <div class="row text-center">
-                    <div class="col-lg-12">
-                        <h5><span style="color: #ee6b2f"> Número en la Pokédex: </span> {{ pokemonAleatorio.id }} </h5>
-                        <h5><span style="color: #ee6b2f"> Altura: </span> {{ pokemonAleatorio.height }} m</h5>
-                        <h5><span style="color: #ee6b2f"> Peso: </span> {{ pokemonAleatorio.weight }} kg</h5>
-                        <h5><span style="color: #ee6b2f"> Tipo/s: </span> 
-                            <div class="type-container">
-                                <span *ngFor="let type of pokemonAleatorio.types" [ngClass]="getCssClassForType(type.type.name)">
-                                {{ type.type.name | uppercase }}
-                                </span>
-                            </div>
-                        </h5>
-                    </div>
-                    <div class="col-lg-12 mt-3">
-                    <button type="button" class="btn btn-primary rounded-circle btn-circle d-flex align-items-center justify-content-center" (click)="cambiarPokemon()">
-                        <span class="material-symbols-outlined">refresh</span>
-                    </button>
-                    </div>
-            </div>
     </div>
-</div>
 </div>
