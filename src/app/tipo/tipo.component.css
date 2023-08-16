@@ -34,7 +34,6 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    
   }
   
   .table-container {
@@ -46,6 +45,7 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 70px;
+    margin-bottom: 40px;
   }
   
   td {
@@ -62,143 +62,7 @@
   .input-group {
     margin-bottom: 10px;
   }
-  
-  button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 8px 20px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
-  p {
-    font-weight: bold;
-  }
 
-  .type-normal {
-    background-color: #A8A878;
-    text-align: center;
-    font-weight: bold;
-    
-  }
-  
-  .type-fire {
-    background-color: #F08030;
-    text-align: center;
-    font-weight: bold;
-    
-  }
-  
-  .type-water {
-    background-color: #6890F0;
-    color: white;
-    text-align: center;
-    font-weight: bold;
-    
-  }
-  
-  .type-electric {
-    background-color: #F8D030;
-    text-align: center;
-    font-weight: bold;
-    
-  }
-  
-  .type-grass {
-    background-color: #78C850;
-    text-align: center;
-    font-weight: bold;
-    
-  }
-  
-  .type-ice {
-    background-color: #98D8D8;
-    text-align: center;
-    font-weight: bold;
-  }
-  
-  .type-fighting {
-    background-color: #C03028;
-    color: white;
-    text-align: center;
-    font-weight: bold;
-  }
-  
-  .type-poison {
-    background-color: #A040A0;
-    color: white;
-    text-align: center;
-    font-weight: bold;
-  }
-  
-  .type-ground {
-    background-color: #E0C068;
-    text-align: center;
-    font-weight: bold;
-  }
-  
-  .type-flying {
-    background-color: #A890F0;
-    text-align: center;
-    font-weight: bold;
-  }
-  
-  .type-psychic {
-    background-color: #F85888;
-    text-align: center;
-    font-weight: bold;
-  }
-  
-  .type-bug {
-    background-color: #A8B820;
-    text-align: center;
-    font-weight: bold;
-  }
-  
-  .type-rock {
-    background-color: #B8A038;
-    text-align: center;
-    font-weight: bold;
-  }
-  
-  .type-ghost {
-    background-color: #705898;
-    color: white;
-    text-align: center;
-    font-weight: bold;
-  }
-  
-  .type-dragon {
-    background-color: #7038F8;
-    color: white;
-    text-align: center;
-    font-weight: bold;
-  }
-  
-  .type-dark {
-    background-color: #705848;
-    color: white;
-    text-align: center;
-    font-weight: bold;
-  }
-  
-  .type-steel {
-    background-color: #B8B8D0;
-    text-align: center;
-    font-weight: bold;
-  }
-  
-  .type-fairy {
-    background-color: #EE99AC;
-    text-align: center;
-    font-weight: bold;
-  }
-
-  /* Estilos para la calculadora */
   .calculator-container {
     background-color: #ffffff;
     padding: 20px;
@@ -210,10 +74,6 @@
     font-size: 24px;
     margin-bottom: 20px;
     color: #ee6b2f;
-  }
-  
-  .input-group {
-    margin-bottom: 10px;
   }
   
   .form-select {
