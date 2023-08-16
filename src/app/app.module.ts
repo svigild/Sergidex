@@ -13,6 +13,7 @@ import { EquipoComponent } from './equipo/equipo.component';
 import { ListaPokemonEquipoComponent } from './lista-pokemon-equipo/lista-pokemon-equipo.component';
 import { PokemonDetailComponent } from './pokemon-detail/pokemon-detail.component';
 import { SobreMiComponent } from './sobre-mi/sobre-mi.component';
+import { TipoComponent } from './tipo/tipo.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { SobreMiComponent } from './sobre-mi/sobre-mi.component';
     EquipoComponent,
     ListaPokemonEquipoComponent,
     PokemonDetailComponent,
-    SobreMiComponent
+    SobreMiComponent,
+    TipoComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,58 @@
+<app-navbar></app-navbar>
+<div class="container">
+<div class="calculator-container">
+    <h2 class="calculator-title">Calculadora de Tipos Pokémon</h2>
+    <div class="input-group">
+      <label for="userType">Tu Tipo:</label>
+      <select class="form-select" id="userType" [(ngModel)]="userType" (ngModelChange)="calculateEffectiveness()">
+        <option *ngFor="let typeName of typeNames" [value]="typeName">{{ typeName }}</option>
+      </select>
+    </div>
+    <div class="input-group">
+      <label for="opponentType">Tipo del Oponente:</label>
+      <select class="form-select" id="opponentType" [(ngModel)]="opponentType" (ngModelChange)="calculateEffectiveness()">
+        <option *ngFor="let typeName of typeNames" [value]="typeName">{{ typeName }}</option>
+      </select>
+    </div>
+    <div class="result-container" *ngIf="effectiveness !== null">
+      <p class="result-text">
+        Efectividad:
+        <span [ngClass]="{
+            'effectiveness-text': true,
+            'text-success': effectiveness === 2,
+            'text-warning': effectiveness === 1,
+            'text-danger': effectiveness === 0.5,
+            'text-muted': effectiveness === 0
+        }">
+          {{
+            effectiveness === 2 ? 'Super efectivo (x2)' :
+            effectiveness === 1 ? 'Neutral (x1)' :
+            effectiveness === 0.5 ? 'Poco efectivo (x0.5)' :
+            effectiveness === 0 ? 'Inmune (x0)' : ''
+          }}
+        </span>
+      </p>
+    </div>
+  </div>
+  </div>
+<div class="container">
+  <div class="table-container">
+    <table class="center-table">
+      <thead>
+        <tr>
+          <th></th>
+          <th *ngFor="let typeName of typeNames" [ngClass]="getTypeClass(typeName)">{{ typeName }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let rowType of typeNames">
+          <th [ngClass]="getTypeClass(rowType)">{{ rowType }}</th>
+          <td *ngFor="let colType of typeNames" [ngClass]="getEffClass(types[rowType][colType])">
+            {{ types[rowType][colType] }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+</div>

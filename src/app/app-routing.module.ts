@@ -6,6 +6,7 @@ import { EquipoComponent } from './equipo/equipo.component';
 import { SobreMiComponent } from './sobre-mi/sobre-mi.component';
 import { PokemonDetailComponent } from './pokemon-detail/pokemon-detail.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { TipoComponent } from './tipo/tipo.component';
 
 const routes: Routes = [
   {path:'', redirectTo: 'inicio', pathMatch: 'full' },
@@ -13,7 +14,8 @@ const routes: Routes = [
   {path:'buscar', component:BuscarComponent},
   {path:'equipo', component:EquipoComponent},
   {path:'sobre-mi', component:SobreMiComponent},
-  {path:'pokemon/:id', component:PokemonDetailComponent}
+  {path:'pokemon/:id', component:PokemonDetailComponent},
+  {path:'tipos', component:TipoComponent}
   ];
 
 @NgModule({

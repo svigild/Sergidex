@@ -1,33 +1,32 @@
-<div class="custom-buscar">
-  <app-navbar></app-navbar>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-  <div class="container">
-    <app-buscador (search)="updateSearchTerm($event)"></app-buscador>
-    <div class="row">
-      <div class="col-md-2" *ngFor="let pokemon of visiblePokemonList">
-        <a [routerLink]="['/pokemon', pokemon.id]" target="_blank" class="card-link">
-        <div class="card mb-3">
-          <div class="pokemon-imagen">
-            <img class="card-img-top" [src]="pokemon.sprites?.other['official-artwork']?.front_default" alt="{{ pokemon.name }}">
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="search-container">
+      <input type="search" [(ngModel)]="searchTerm" placeholder="Buscar Pokémon" (input)="searchPokemon(selectedType)">
+  </div>
+  <div class="row">
+    <div class="col-md-2 col-sm-4 col-xs-6" *ngFor="let pokemon of filteredPokemonList" (click)="selectPokemon(pokemon)">
+      <a [routerLink]="['/pokemon', pokemon.id]" target="_blank" class="card-link">
+      <div class="card mb-3">
+        <div class="pokemon-imagen">
+          <img class="card-img-top" [src]="pokemon.sprites?.front_default" alt="{{ pokemon.name }}">
+        </div>
+        <div class="card-body text-center">
+          <div class="nombre-contenedor">
+            <p class="pokemon-id">#{{ pokemon.id }}</p>
+            <h2 class="pokemon-nombre">{{ pokemon.name | titlecase }}</h2>
           </div>
-          <div class="card-body text-center">
-            <div class="nombre-contenedor">
-              <p class="pokemon-id">#{{ pokemon.id }}</p>
-              <h2 class="pokemon-nombre">{{ pokemon.name | titlecase }}</h2>
-            </div>
-            <div class="types">
-              <p *ngFor="let type of pokemon.types" [ngClass]="getCssClassForType(type.type.name)" class="tipo">
-                {{ type.type.name | uppercase }}
-              </p>
-            </div>
-            <div class="pokemon-stats">
-              <p class="stat">{{ pokemon.height / 10 }} M</p>
-              <p class="stat">{{ pokemon.weight / 10}} KG</p>
-            </div>
+          <div class="types">
+            <p *ngFor="let type of pokemon.types" [ngClass]="getCssClassForType(type.type.name)" class="tipo">
+              {{ type.type.name | uppercase }}
+            </p>
+          </div>
+          <div class="pokemon-stats">
+            <p class="stat">{{ pokemon.height / 10 }} M</p>
+            <p class="stat">{{ pokemon.weight / 10 }} KG</p>
           </div>
         </div>
-      </a>
       </div>
+    </a>
     </div>
   </div>
-  </div>
+</div>

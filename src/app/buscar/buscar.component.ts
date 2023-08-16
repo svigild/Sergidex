@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, Input, Output, EventEmitter } from '@angular/core';
 import { ServicioService } from '../servicio.service';
 import { debounceTime } from 'rxjs/operators';
 
@@ -9,12 +9,12 @@ import { debounceTime } from 'rxjs/operators';
 })
 export class BuscarComponent implements OnInit {
 
-  pokemonList : any[] = []; //Creo la array vacia
-  visiblePokemonList: any[] = [];
-  loading: boolean = false;
+  @Input() pokemonList: any[] = [];
+  @Output() pokemonSelected = new EventEmitter<any>();
   
-  searchTerm: string = ''; // Término de búsqueda
-
+  //pokemonList : any[] = []; //Creo la array vacia
+  searchTerm: string = '';
+  selectedType: string = '';
 
   constructor(private pokemonService: ServicioService) { }
 
@@ -22,43 +22,17 @@ export class BuscarComponent implements OnInit {
     this.getPokemonList();
   }
 
+  //Obtengo la lista con los Pokemon
   getPokemonList() {
     this.pokemonService.getAllPokemon().subscribe(
       (pokemonList: any[]) => {
         this.pokemonList = pokemonList;
-        this.visiblePokemonList = [...pokemonList]; // Initialize the visible list
+        this.filteredPokemonList = pokemonList; // Asigna la lista filtrada también
       },
       (error) => {
         console.log('Error getting Pokemon list:', error);
       }
     );
-  }
-  
- 
-  getAllPokemon() {
-    this.loading = true;
-    this.pokemonService.getAllPokemon().subscribe(
-      (data: any) => {
-        const pokemonPromises = data.results.map((pokemonResult: any) => {
-          const pokemonNumber = this.extractPokemonNumberFromUrl(pokemonResult.url);
-          return this.pokemonService.getPokemonPorNumero(pokemonNumber).toPromise();
-        });
-  
-        Promise.all(pokemonPromises).then((pokemonDetails: any[]) => {
-          this.pokemonList = pokemonDetails; 
-          this.loading = false;
-        });
-      },
-      (error) => {
-        console.log('Error getting Pokemon list:', error);
-        this.loading = false;
-      }
-    );
-  }
-
-  extractPokemonNumberFromUrl(url: string): number {
-    const urlParts = url.split('/');
-    return parseInt(urlParts[urlParts.length - 2], 10);
   }
 
   typeColorMappings: { [key: string]: string } = {
@@ -88,27 +62,44 @@ export class BuscarComponent implements OnInit {
     return `rounded ${typeClass}`;
   }
 
-  
-  updateSearchTerm(term: string) {
-    this.searchTerm = term;
-    this.filterPokemon();
+  selectPokemon(pokemon: any) {
+    this.pokemonSelected.emit(pokemon);
   }
+
+  allTypes: string[] = [
+    'normal', 'fire', 'water', 'electric', 'grass', 'ice', 'fighting', 'poison',
+    'ground', 'flying', 'psychic', 'bug', 'rock', 'ghost', 'dragon', 'dark', 'steel', 'fairy'
+  ];
+
+  getColorClassForType(type: string): string {
+    const typeColorClass = this.typeColorMappings[type.toLowerCase()] || 'btn-secondary';
+    return `btn ${typeColorClass}`;
+  }
+
+  filteredPokemonList: any[] = []; // Lista de Pokémon filtrados por tipo
+
+  filterByType(selectedType: string) {
+    this.selectedType = selectedType; // Actualizar el tipo seleccionado
   
-  filterPokemon() {
-    if (this.searchTerm) {
-      this.pokemonService.filterPokemonByName(this.searchTerm)
-        .pipe(debounceTime(300))
-        .subscribe(
-          (filteredPokemon: any[]) => {
-            this.visiblePokemonList = filteredPokemon;
-          },
-          (error) => {
-            console.log('Error filtering Pokemon:', error);
-          }
-        );
-    } else {
-      this.visiblePokemonList = [...this.pokemonList]; // Reset the visible list
-    }
+    // Filtrar la lista de Pokémon por tipo y término de búsqueda
+    this.filteredPokemonList = this.pokemonList.filter(pokemon =>
+      (this.selectedType === '' || pokemon.types.some((type: { type: { name: string } }) => type.type.name === this.selectedType)) &&
+      pokemon.name.toLowerCase().includes(this.searchTerm.toLowerCase())
+    );
+  }
+
+  seeAllPokemon(){
+    this.filteredPokemonList = this.pokemonList; 
+  }
+
+  searchPokemon(type: string) {
+    this.selectedType = type; // Actualizar el tipo seleccionado
+  
+    // Filtrar la lista de Pokémon por tipo y término de búsqueda
+    this.filteredPokemonList = this.pokemonList.filter(pokemon =>
+      (this.selectedType === '' || pokemon.types.some((type: { type: { name: string } }) => type.type.name === this.selectedType)) &&
+      pokemon.name.toLowerCase().includes(this.searchTerm.toLowerCase())
+    );
   }
 
 }
