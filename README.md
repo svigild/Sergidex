@@ -1,9 +1,11 @@
 # Pokedex
+![SergiDex](https://github.com/svigild/Sergidex/assets/116498192/2ce11235-c1ec-47a1-a02f-e4184c8ed1b5)
+
+Puedes visitar la página aquí 👉 sergidex.netlify.app
 
 ## Versión 0.1 - Creada página de Inicio
 
-![image](https://github.com/svigild/Pokedex/assets/116498192/1f85cbc7-8b92-4047-8aa3-19da602d8eb0)
-
+![image](https://github.com/svigild/Sergidex/assets/116498192/af88c6e9-7121-4c9c-b439-8dcfe968ac13)
 
 
 ## Versión 0.2 - Creada página de Buscar
@@ -11,32 +13,36 @@ Nada más entrar a la página los usuarios podrán ver los diferentes Pokémon p
 
 Página por defecto:
 
-![image](https://github.com/svigild/Pokedex/assets/116498192/e94a86d8-417a-4ee6-82d8-71d547d00f75)
+![image](https://github.com/svigild/Sergidex/assets/116498192/1c5a1579-85c3-4de2-825c-84a6be2e8e54)
 
+![image](https://github.com/svigild/Sergidex/assets/116498192/22195946-e437-4d01-aa19-9c0cbe545304)
 
 Página tras realizar una búsqueda:
 
-![image](https://github.com/svigild/Pokedex/assets/116498192/ec04967a-7096-4e5b-b500-acb32511ad7e)
+![image](https://github.com/svigild/Sergidex/assets/116498192/11ad523e-5a2b-44b1-b01a-0de2bc14481f)
 
 
 
 ## Versión 0.3 - Creada página de Equipo
 El usuario podrá elegir 6 Pokémon para crear su propio equipo. Se muestran todos los Pokémon y el usuario puede buscar por nombre o filtrar por el tipo del Pokémon.
 
-![image](https://github.com/svigild/Pokedex/assets/116498192/4f8440d5-735b-4d23-9d00-78ab39b4453c)
+![image](https://github.com/svigild/Sergidex/assets/116498192/7339e53d-7c6a-4aff-a745-e2d6237a7662)
+
 
 
 ## Versión 0.4 - Página de inicio mejorada
 
 Se ha añadido la sección de "Pokémon Destacados" donde se podrán ver mis 4 Pokémon favoritos.
 
-![image](https://github.com/svigild/Pokedex/assets/116498192/14bf625d-22bd-4c91-bf9a-1129deec6ac1)
-
 Se ha mejorado el diseño del Pokémon aleatorio y se ha añadido la posibilidad de ver al Pokémon en su forma shiny apretando el botón de la estrella ✨
 
-![image](https://github.com/svigild/Pokedex/assets/116498192/5756f9ab-9eaa-4a66-90bb-d6b103c4d9dc)
-![image](https://github.com/svigild/Pokedex/assets/116498192/b63e11eb-2595-4356-8b59-daebd8cbdc1a)
+![image](https://github.com/svigild/Sergidex/assets/116498192/22d8f060-c9d5-42b8-9344-6b66ce27aa32)
 
+![image](https://github.com/svigild/Sergidex/assets/116498192/d27dce1a-4b4e-43bc-931e-e63bd098bc51)
+
+
+## Versión 0.5 - Página de tipos creada
+![image](https://github.com/svigild/Sergidex/assets/116498192/d0cedce8-5da2-445f-b687-46c6f1fa7248)
 
 
 
