@@ -1,4 +1,4 @@
-# Pokedex
+# Pokedex / SergiDex creada con Angular
 ![SergiDex](https://github.com/svigild/Sergidex/assets/116498192/2ce11235-c1ec-47a1-a02f-e4184c8ed1b5)
 
 Puedes visitar la página aquí 👉 sergidex.netlify.app
