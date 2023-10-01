@@ -9,7 +9,7 @@ Puedes visitar la página aquí sergidex.netlify.app
 
 
 ## Versión 0.2 - Creada página de Buscar
-Nada más entrar a la página los usuarios podrán ver los diferentes Pokémon paginados de 50 en 50 y en la barra de búsqueda podrán buscar un Pokémon en específico.
+Nada más entrar a la página los usuarios podrán ver los diferentes Pokémon paginados de 50 en 50 y en la barra de búsqueda podrán buscar un Pokémon en específico. 
 
 Página por defecto:
 
