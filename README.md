@@ -5,7 +5,7 @@ Puedes visitar la página aquí sergidex.netlify.app
 
 ## Versión 0.1 - Creada página de Inicio
 
-![image](https://github.com/svigild/Sergidex/assets/116498192/af88c6e9-7121-4c9c-b439-8dcfe968ac13)
+![image](https://github.com/svigild/Sergidex/assets/116498192/af88c6e9-7121-4c9c-b439-8dcfe968ac13) 
 
 
 ## Versión 0.2 - Creada página de Buscar
