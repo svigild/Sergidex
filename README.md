@@ -17,7 +17,7 @@ Página por defecto:
 
 ![image](https://github.com/svigild/Sergidex/assets/116498192/22195946-e437-4d01-aa19-9c0cbe545304)
 
-Página tras realizar una búsqueda:
+Página tras realizar una búsqueda: 
 
 ![image](https://github.com/svigild/Sergidex/assets/116498192/11ad523e-5a2b-44b1-b01a-0de2bc14481f)
 
