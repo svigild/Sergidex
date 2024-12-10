@@ -45,6 +45,7 @@ Se ha mejorado el diseño del Pokémon aleatorio y se ha añadido la posibilidad
 ![image](https://github.com/svigild/Sergidex/assets/116498192/d0cedce8-5da2-445f-b687-46c6f1fa7248)
 
 
+![321shots_so](https://github.com/user-attachments/assets/18b8a5a4-c602-49d3-b2a8-d26faa7408ca)
 
 
 
